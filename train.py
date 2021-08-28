@@ -1,10 +1,8 @@
-# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
-"""
+
 Train a YOLOv5 model on a custom dataset
 
 Usage:
-    $ python path/to/train.py --data coco128.yaml --weights yolov5s.pt --img 640
-"""
+  
 
 import argparse
 import logging
@@ -47,7 +45,7 @@ from utils.loggers import Loggers
 from utils.callbacks import Callbacks
 
 LOGGER = logging.getLogger(__name__)
-LOCAL_RANK = int(os.getenv('LOCAL_RANK', -1))  # https://pytorch.org/docs/stable/elastic/run.html
+LOCAL_RANK = int(os.getenv('LOCAL_RANK', -1)) 
 RANK = int(os.getenv('RANK', -1))
 WORLD_SIZE = int(os.getenv('WORLD_SIZE', 1))
 
